@@ -27,12 +27,4 @@ jobs:
           DEMO_MODE: true
         run: |
           npm run build
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_PUBLISH_TO_PAGES_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: gladysassistant-demo
-          directory: ./front/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+     
